@@ -3,7 +3,7 @@ status = "";
 objects = [];
 
 function preload() {
-    img = loadImage('dog_cat.jpg');
+
 }
 
 function setup() {
@@ -24,9 +24,10 @@ function modelLoaded() {
 function gotResult(error, results) {
     if (error) {
         console.log(error);
+    } else {
+        console.log(results);
+        objects = results;
     }
-console.log(results);
-objects = results;
 }
 
 function draw() {
